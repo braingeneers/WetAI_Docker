@@ -1,7 +1,9 @@
+# WetAI Docker
+
+This code creates the docker container for WetAI. This is the main code for the entire WetAI project. WetAI is currently in development. More will be added to this readme later.
 
 
-
-# Helpful Docker Commands
+## Helpful Docker Commands
 **Run docker container**
 
 `docker run -it --privileged -p 8891:80 -p 8871:8888 --name wet-io --user root jupyter/tensorflow-notebook:feacdbfc2e89 /bin/bash `
