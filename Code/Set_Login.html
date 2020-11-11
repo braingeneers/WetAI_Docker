@@ -1,0 +1,59 @@
+{% extends 'templates/login.html'  %}
+
+
+{% block site  %}
+
+<div class="text-center"><font color="DarkBlue" face="Palatino" size=7><i>wet<b>AI</b>.</i>io</font></div>
+<div class="row"><div class=" col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4"><hr style="margin-top:0px;padding-top:0px"></div></div>
+<div class='row'>
+    <div class='col-xs-12 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4'>
+        <div class='embed-responsive embed-responsive-16by9'> 
+            <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/pwBs4J4xDOw'> 
+            </iframe>
+        </div>
+    </div>
+</div>
+<div class="row"><div class=" col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4"><hr></div></div>
+
+{{super()}}
+
+<div class="container">
+<p style="color:white;">.</p> 
+
+<h2 style="color:dimGrey;" class="text-center" >Developed by</h2>     
+<div class="row"> 
+    <div class="col-sm-offset-1 col-xs-6 col-sm-3"><img src="https://braingeneers.sites.ucsc.edu/files/2019/05/braingeneers-logotype.png" class="img-responsive" style="margin-top:30px;"></div> 
+    <div class="col-xs-6 col-sm-3"><img src="https://ucscgenomics.soe.ucsc.edu/wp-content/uploads/Revised_GI_Logo_2019_blue-01.svg" class="img-responsive"></div> 
+    <div class="col-xs-6 col-sm-3"><img src="https://medicine.ucsf.edu/sites/medicine.ucsf.edu/themes/custom/dom/logo.svg" class="img-responsive" style="margin-top:20px;"></div> 
+</div>
+<p style="color:white;">.</p> 
+<p style="color:white;">.</p> 
+
+<h2 style="color:dimGrey;" class="text-center" >with Generous Support</h2> 
+<p style="color:white;">.</p> 
+<div class="row"> 
+    <div class="col-xs-6 col-sm-3"><img src="https://jfforg-prod-prime.s3.amazonaws.com/media/images/Schmidt-Futures-logo.width-2720.png" class="img-responsive" style="margin-top:25px;"></div> 
+    <div class="col-xs-6 col-sm-3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTfsiQcS64P3BjP8zYIbesMZglL77_Pclbj-w&usqp=CAU" class="img-responsive"></div> 
+    <div class="col-xs-6 col-sm-3"><img src="https://broadfoundation.org/wp-content/uploads/2016/04/broad.jpg" class="img-responsive"></div> 
+    <div class="col-xs-6 col-sm-3"><img src="https://upload.wikimedia.org/wikipedia/en/b/ba/SFARI_Logo_2.jpg" class="img-responsive" style="margin-left:30px"></div> 
+</div>
+
+<div class="row"> 
+    <div class="col-xs-6 col-sm-3"><img src="https://i1.wp.com/www.ucrc-mali.org/wp-content/uploads/2019/04/NIH-logo.jpg?fit=600%2C216&ssl=1&w=1400" class="img-responsive" style="margin-top:15px;"></div> 
+    <div class="col-xs-6 col-sm-3"><img src="https://upload.wikimedia.org/wikipedia/en/0/03/Brain_Behavior_Research_Foundation_logo.png" class="img-responsive" style="margin:10px"></div> 
+</div>
+<p style="color:white;">.</p> 
+<p style="color:white;">.</p> 
+</div>
+
+<script>
+document.getElementById("header").innerHTML = "";
+window.addEventListener('load', (event) => {
+    document.getElementById("site").style="display: block; height:auto";
+});
+window.addEventListener('resize', (event) => {
+    document.getElementById("site").style="display: block; height:auto";
+});
+</script>
+
+{% endblock  %}
