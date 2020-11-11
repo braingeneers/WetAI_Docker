@@ -83,6 +83,7 @@ apt-get install -y --no-install-recommends awscli # Install aws
 pip install --upgrade git+https://github.com/braingeneers/braingeneerspy.git # install braingeneers python package
 cd ~ && mkdir .aws # Setup for AWS credentials file
 touch ~/.aws/credentials
+pip install --upgrade nbstripout # used to clean up notebooks before committing them
 
 ############################################
 ############################################
