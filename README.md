@@ -10,7 +10,7 @@ This code creates the docker container for WetAI. This is the main code for the 
 **Create Image from Files**
 ```
 cd WetAI_Docker
-docker build --no-cache -t pupster90/wetai:latest .  
+docker build --no-cache -t braingeneers/wetai:latest .  
 ```
 
 ## Helpful Docker Commands
