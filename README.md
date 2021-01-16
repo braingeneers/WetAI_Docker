@@ -25,7 +25,7 @@ docker build --no-cache -t braingeneers/wetai:latest .
 
 **Commit docker container**
 
-`docker commit --change='CMD ["tini", "-g", "jupyter", "notebook"]' -c "EXPOSE 80" -c "EXPOSE 8888" io-test  pupster90/wet_io:v1.0.0`
+`docker commit --change='CMD ["tini", "-g", "jupyter", "notebook"]' -c "EXPOSE 80" -c "EXPOSE 8888" wetai-test  braingeneers/wetai:v1.0.0`
 
 **Save docker image**
 ```
