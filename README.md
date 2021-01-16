@@ -16,7 +16,7 @@ docker build --no-cache -t braingeneers/wetai:latest .
 ## Helpful Github Commands
 **Get Changes from Github**
 
-`git fetch https://github.com/braingeneers/WetAI_Docker.git`
+`git pull origin main`
 
 ## Helpful Docker Commands
 **Run docker container**
