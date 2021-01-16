@@ -29,8 +29,8 @@ docker build --no-cache -t braingeneers/wetai:latest .
 
 **Save docker image**
 ```
-docker tag pupster90/wet_io:latest pupster90/wet_io:v1.0.0
-docker push pupster90/wet_io:latest
-docker push pupster90/wet_io:v1.0.0
+docker tag braingeneers/wetai:latest braingeneers/wetai:v1.0.0
+docker push braingeneers/wetai:latest
+docker push braingeneers/wetai:v1.0.0
 ```
 `
