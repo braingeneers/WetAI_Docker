@@ -21,7 +21,7 @@ docker build --no-cache -t braingeneers/wetai:latest .
 ## Helpful Docker Commands
 **Run docker container**
 
-`docker run -it --privileged -p 8891:80 -p 8871:8888 --name wet-io --user root jupyter/tensorflow-notebook:feacdbfc2e89 /bin/bash `
+`docker run -it --privileged -p 8800:80 -p 8900:8888 --name wetai-elliott --user root braingeneers/wetai:latest /bin/bash `
 
 **Commit docker container**
 
