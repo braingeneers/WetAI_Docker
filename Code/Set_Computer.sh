@@ -60,13 +60,13 @@ mv ~/WetAI_Docker/Code/Password/Set_Password.py ~/.Set_Password.py
 chmod +x ~/WetAI_Docker/Code/Password/password.sh && mv ~/WetAI_Docker/Code/Password/password.sh /usr/local/bin/password
 
 # Create user's starting Apps & Files by downloading everything from github
-cd ~ && mkdir Apps Documents                   #<-- Create folders
+cd ~ && mkdir Apps Projects                   #<-- Create folders
 cd ~/Apps && mkdir  braingeneers
 rm -rf ~/work ~/WetAI_Docker                   #<-- remove previous folders
 #cd ~/Apps/braingeneers && git clone https://github.com/pupster90/Agora.git && git clone https://github.com/pupster90/Learn_io.git
 cd ~/Apps/braingeneers && git https://github.com/braingeneers/Agora.git && git clone https://github.com/braingeneers/Learn_WetAI.git
 git clone cd ~/Apps/braingeneers && git clone https://github.com/pupster90/spikesort_easy.git
-#cd ~/Documents && git clone https://github.com/pupster90/My_First_Research_Paper.git
+#cd ~/Projects && git clone https://github.com/pupster90/My_First_Research_Paper.git
 
 
 
