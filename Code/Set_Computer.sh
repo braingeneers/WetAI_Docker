@@ -57,7 +57,7 @@ mv ~/WetAI_Docker/Code/Set_Login.html /root/login.html
 mv ~/WetAI_Docker/Welcome\ to\ WetAI\ \ .ipynb ~/
 mkdir ~/.jupyter/custom && mv ~/WetAI_Docker/Code/Set_Interface.js ~/.jupyter/custom/custom.js 
 mv ~/WetAI_Docker/Code/Password/Set_Password.py ~/.Set_Password.py
-chmod +x ~/wetai_docker/Code/Password/password.sh && mv ~/WetAI_Docker/Code/Password/password.sh /usr/local/bin/password
+chmod +x ~/WetAI_Docker/Code/Password/password.sh && mv ~/WetAI_Docker/Code/Password/password.sh /usr/local/bin/password
 
 # Create user's starting Apps & Files by downloading everything from github
 cd ~ && mkdir Apps Documents                   #<-- Create folders
