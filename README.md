@@ -2,6 +2,13 @@
 
 This code creates the docker container for WetAI. This is the main code for the entire WetAI project. WetAI is currently in development. More will be added to this readme later.
 
+## Build Docker Image
+*** Clone Repository***
+`git clone https://github.com/braingeneers/WetAI_Docker.git`
+
+*** Create Image from Files***
+`docker build --no-cache -t pupster90/wetai:latest .  `
+
 
 ## Helpful Docker Commands
 **Run docker container**
@@ -11,10 +18,6 @@ This code creates the docker container for WetAI. This is the main code for the 
 **Commit docker container**
 
 `docker commit --change='CMD ["tini", "-g", "jupyter", "notebook"]' -c "EXPOSE 80" -c "EXPOSE 8888" io-test  pupster90/wet_io:v1.0.0`
-
-**Create images from file**
-
-`docker build --no-cache -t pupster90/wetai:latest .  `
 
 **Save docker image**
 ```
