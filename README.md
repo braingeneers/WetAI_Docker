@@ -24,6 +24,7 @@ docker build --no-cache -t braingeneers/wetai:latest .
 `docker run -it --privileged -p 8800:80 -p 8900:8888 --name wetai-elliott --user root braingeneers/wetai:latest /bin/bash `
 
 **Run docker with Volume**
+
 Volumes let us share a container's files outside of the docker. We create the folder we want to share, make it public, and then run docker.
 ```
 mkdir kate
