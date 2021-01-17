@@ -23,6 +23,14 @@ docker build --no-cache -t braingeneers/wetai:latest .
 
 `docker run -it --privileged -p 8800:80 -p 8900:8888 --name wetai-elliott --user root braingeneers/wetai:latest /bin/bash `
 
+**Run docker with Volume**
+Volumes let us share a container's files outside of the docker. We create the folder we want to share, make it public, and then run docker.
+```
+mkdir kate
+chmod a+rwx -R kate
+docker run -it --privileged -p 8803:80 -p 8903:8888 --name wetai-kate --user root -v /public/home/melliot1/kate:/home/jovyan/Projects braingeneers/wetai:v2.0.2 /bin/bash
+```
+
 **Commit docker container**
 
 `docker commit --change='CMD ["tini", "-g", "jupyter", "notebook"]' -c "EXPOSE 80" -c "EXPOSE 8888" wetai-test  braingeneers/wetai:v1.0.0`
