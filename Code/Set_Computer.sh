@@ -118,6 +118,7 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 apt-get update
 apt-get -y install docker-ce docker-ce-cli containerd.io
 #dockerd & #commented because command doesn't work here
+service docker start # Test antoehr command to run docker
 
 ### Install SpikeSort
 pip install spikeinterface ml_ms4alg boto3
@@ -125,3 +126,4 @@ apt-get -y update
 apt-get -y install vim
 pip install --upgrade kachery
 pip install git+https://github.com/flatironinstitute/spikeforest2.git
+
