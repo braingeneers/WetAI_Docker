@@ -7,16 +7,17 @@ This code creates the docker container for WetAI. This is the main code for the 
 
 `git clone https://github.com/braingeneers/WetAI_Docker.git`
 
+**Update repo to latest version**
+
+```
+git pull origin main
+```
+
 **Create Image from Files**
 ```
 cd WetAI_Docker
 docker build --no-cache -t braingeneers/wetai:latest .  
 ```
-
-## Helpful Github Commands
-**Get Changes from Github**
-
-`git pull origin main`
 
 ## Helpful Docker Commands
 **Run docker container**
