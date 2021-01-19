@@ -84,7 +84,7 @@ pip install --upgrade git+https://github.com/braingeneers/braingeneerspy.git # i
 cd ~ && mkdir .aws # Setup for AWS credentials file
 touch ~/.aws/credentials
 pip install --upgrade nbstripout # used to clean up notebooks before committing them
-apt install -y  zip unzip. # allows zipping files
+apt install -y  zip unzip # allows zipping files
 
 ############################################
 ############################################
