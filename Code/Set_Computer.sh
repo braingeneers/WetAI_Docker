@@ -113,12 +113,11 @@ apt-get install -y xvfb libgtk2.0-0 libgconf-2-4
 
 # Spike_Classiffication App
 pip install git+https://github.com/ahwillia/tensortools
-
-conda install -y  py-xgboost
+conda install -y py-xgboost
 pip install torch
-
 pip install colour
 pip install plotly
+apt-get install libgomp1
 
 
 ############################################
