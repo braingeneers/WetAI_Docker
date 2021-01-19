@@ -114,6 +114,7 @@ apt-get install -y xvfb libgtk2.0-0 libgconf-2-4
 # Spike_Classiffication App
 pip install torch
 pip install git+https://github.com/ahwillia/tensortools
+pip install colour
 
 
 ############################################
