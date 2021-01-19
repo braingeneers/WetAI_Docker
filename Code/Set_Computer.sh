@@ -104,6 +104,16 @@ echo 'alias awsn="aws --endpoint https://s3.nautilus.optiputer.net"' >> ~/.bashr
 # Setup to run Kate's Code
 apt-get install -y xvfb libgtk2.0-0 libgconf-2-4
 
+
+############################################
+############################################
+#.    Ash
+############################################
+############################################
+
+pip install torch # for Spike_Classiffication app
+
+
 ############################################
 ############################################
 #.    Nico
