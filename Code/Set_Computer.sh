@@ -1,4 +1,4 @@
-VERSION_NAME=v2.0.2
+VERSION_NAME=v2.0.3
 # Set io's Version name in custom.js file
 sed -i "s/{VERSION_NAME}/$VERSION_NAME/g"  ~/WetAI_Docker/Code/Set_Interface.js
 
@@ -84,6 +84,7 @@ pip install --upgrade git+https://github.com/braingeneers/braingeneerspy.git # i
 cd ~ && mkdir .aws # Setup for AWS credentials file
 touch ~/.aws/credentials
 pip install --upgrade nbstripout # used to clean up notebooks before committing them
+apt install -y  zip unzip. # allows zipping files
 
 ############################################
 ############################################
