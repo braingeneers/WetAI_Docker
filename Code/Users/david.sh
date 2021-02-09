@@ -5,5 +5,5 @@ echo 'alias awsn="aws --endpoint https://s3.nautilus.optiputer.net"' >> ~/.bashr
 
 
 # Packages for IoT Messaging in braingeneers
-pip install awsiot
-pip install awscrt
+pip install -y awsiot
+pip install -y awscrt
