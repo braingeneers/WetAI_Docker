@@ -95,8 +95,6 @@ apt-get -y install docker-ce docker-ce-cli containerd.io
 #service docker start # commented because command doesn't work
 
 # run individual braingeneers code
-cd ~/WetAI_Docker/Code/Users && chmod +x *.sh && for f in *.sh; do
-bash "$f" -H
-done
+cd ~/WetAI_Docker/Code/Users && chmod +x *.sh && for f in *.sh; do bash "$f" -H; done;
 
 
