@@ -72,12 +72,7 @@ cd ~/Apps/braingeneers && git clone https://github.com/braingeneers/Agora.git &&
 ############################################
 
 # Code used by all braingeneers
-apt-get install -y --no-install-recommends awscli # Install aws
 pip install --upgrade git+https://github.com/braingeneers/braingeneerspy.git # install braingeneers python package
-cd ~ && mkdir .aws # Setup for AWS credentials file
-touch ~/.aws/credentials
-pip install --upgrade nbstripout # used to clean up notebooks before committing them
-apt install -y  zip unzip # allows zipping files
 
 ### Install Docker
 apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
