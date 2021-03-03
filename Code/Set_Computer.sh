@@ -30,21 +30,9 @@ conda update -y conda
 conda install -y -c conda-forge  rise
 conda install -y -c conda-forge jupyter_contrib_nbextensions #conda install -y -c conda-forge jupyter_nbextensions_configurator
 jupyter nbextensions_configurator enable
-jupyter nbextension enable collapsible_headings/main
-jupyter nbextension enable help_panel/help_panel
-jupyter nbextension enable notify/notify
-jupyter nbextension enable toc2/main
-jupyter nbextension enable varInspector/main
-jupyter nbextension enable codefolding/main
-jupyter nbextension enable hide_header/main
-jupyter nbextension enable hide_input_all/main
-jupyter nbextension enable table_beautifier/main
-jupyter nbextension enable codefolding/edit
-jupyter nbextension enable contrib_nbextensions_help_item/main
-jupyter nbextension enable python-markdown/main
-jupyter nbextension enable move_selected_cells/main
-jupyter nbextension enable splitcell/splitcell
-jupyter nbextension enable tree-filter/index
+for package in collapsible_headings/main notify/notify toc2/main codefolding/main hide_header/main hide_input_all/main table_beautifier/main codefolding/edit contrib_nbextensions_help_item/main python-markdown/main move_selected_cells/main splitcell/splitcell tree-filter/index; do jupyter nbextension enable $package; done;
+jupyter nbextension enable help_panel/help_panel. # should add this line to for loop above
+#jupyter nbextension enable varInspector/main # Cool but removes \tab autocomplete
 
 
 # Set Files from wet_io Github
