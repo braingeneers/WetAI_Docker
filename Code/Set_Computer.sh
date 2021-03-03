@@ -21,7 +21,7 @@ echo "c.NotebookApp.allow_root = True" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.allow_origin = '*'" >> ~/.jupyter/jupyter_notebook_config.py  
 echo "c.NotebookApp.password = 'argon2:\$argon2id\$v=19\$m=10240,t=10,p=8\$lw1+5uzTxfAaGCmLcrQdQA\$5rTtD1TgWidh/JcE84jG4Q'" >> ~/.jupyter/jupyter_notebook_config.py 
 
-### Generic Software Update
+### Generic  Updates
 apt update
 apt-get install update
 conda update -y conda
@@ -46,11 +46,6 @@ jupyter nbextension enable move_selected_cells/main
 jupyter nbextension enable splitcell/splitcell
 jupyter nbextension enable tree-filter/index
 
-# Install required python packages
-pip install PyGithub
-pip install timeago #pip install --upgrade google-cloud-datastore #pip install --upgrade firebase-admin
-pip install redis
-#pip install tensorflow==2.0.0-alpha0  #pip install keras
 
 # Set Files from wet_io Github
 mv ~/WetAI_Docker/Code/Set_Login.html /root/login.html
@@ -77,7 +72,6 @@ cd ~/Apps/braingeneers && git clone https://github.com/braingeneers/Agora.git &&
 ############################################
 
 # Code used by all braingeneers
-conda install -y -c plotly plotly-orca
 apt-get install -y --no-install-recommends awscli # Install aws
 pip install --upgrade git+https://github.com/braingeneers/braingeneerspy.git # install braingeneers python package
 cd ~ && mkdir .aws # Setup for AWS credentials file
