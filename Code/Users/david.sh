@@ -3,6 +3,10 @@
 echo 'alias aws3="aws --endpoint https://s3.nautilus.optiputer.net s3"' >> ~/.bashrc
 echo 'alias awsn="aws --endpoint https://s3.nautilus.optiputer.net"' >> ~/.bashrc
 
+# AWS Code
+apt-get install -y --no-install-recommends awscli # Install aws
+cd ~ && mkdir .aws # Setup for AWS credentials file
+touch ~/.aws/credentials
 
 # Packages for IoT Messaging in braingeneers
 pip3 install redis
