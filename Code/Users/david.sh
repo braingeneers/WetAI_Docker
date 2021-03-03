@@ -5,4 +5,5 @@ echo 'alias awsn="aws --endpoint https://s3.nautilus.optiputer.net"' >> ~/.bashr
 
 
 # Packages for IoT Messaging in braingeneers
+pip3 install redis
 pip install -y awsiotsdk
