@@ -77,7 +77,6 @@ cd ~/Apps/braingeneers && git clone https://github.com/braingeneers/Agora.git &&
 ############################################
 
 # Code used by all braingeneers
-
 conda install -y -c plotly plotly-orca
 apt-get install -y --no-install-recommends awscli # Install aws
 pip install --upgrade git+https://github.com/braingeneers/braingeneerspy.git # install braingeneers python package
@@ -85,49 +84,6 @@ cd ~ && mkdir .aws # Setup for AWS credentials file
 touch ~/.aws/credentials
 pip install --upgrade nbstripout # used to clean up notebooks before committing them
 apt install -y  zip unzip # allows zipping files
-
-############################################
-############################################
-#.    David Parks
-############################################
-############################################
-echo 'alias aws3="aws --endpoint https://s3.nautilus.optiputer.net s3"' >> ~/.bashrc
-echo 'alias awsn="aws --endpoint https://s3.nautilus.optiputer.net"' >> ~/.bashrc
-
-
-############################################
-############################################
-#.    Kate
-############################################
-############################################
-
-# Setup to run Kate's Code
-apt-get install -y xvfb libgtk2.0-0 libgconf-2-4
-
-
-############################################
-############################################
-#.    Ash
-############################################
-############################################
-
-# Spike_Classiffication App
-pip install git+https://github.com/ahwillia/tensortools
-conda install -y py-xgboost
-#pip install torch
-pip3 install torchvision
-pip install colour
-pip install plotly
-apt-get install libgomp1
-
-
-############################################
-############################################
-#.    Nico
-############################################
-############################################
-
-# Setup to run Nico's Code
 
 ### Install Docker
 apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
@@ -138,10 +94,7 @@ apt-get -y install docker-ce docker-ce-cli containerd.io
 #dockerd & #commented because command doesn't work here
 #service docker start # commented because command doesn't work
 
-### Install SpikeSort
-pip install spikeinterface ml_ms4alg boto3
-apt-get -y update
-apt-get -y install vim
-pip install --upgrade kachery
-pip install git+https://github.com/flatironinstitute/spikeforest2.git
+# run individual braingeneers code
+
+
 
