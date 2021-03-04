@@ -22,9 +22,7 @@ echo "c.NotebookApp.allow_origin = '*'" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.password = 'argon2:\$argon2id\$v=19\$m=10240,t=10,p=8\$lw1+5uzTxfAaGCmLcrQdQA\$5rTtD1TgWidh/JcE84jG4Q'" >> ~/.jupyter/jupyter_notebook_config.py 
 
 ### Generic  Updates
-apt update
-apt-get install update
-conda update -y conda
+apt update; apt-get install update; conda update -y conda
 
 ### Install nb-extensiosn 
 conda install -y -c conda-forge  rise
