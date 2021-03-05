@@ -59,20 +59,20 @@ if( document.getElementById("notebook-container") != null ){
     var head = document.head || document.getElementsByTagName('head')[0]
     var style_notebook = document.createElement('style'); //<-- Where we write all of hte <style> changes
     var css = "\
-            /* Remove Enormous Margins */ \
+            // Remove Enormous Margins {} \
             *{margin:0; padding:0;} html, body, \
                  .container{margin:0;!important padding:0;!important} \
                  .container { width:100% !important;}  \
         \
-            /* Make Container Background white */ \
+            // Make Container Background white {} \
             #notebook-container { box-shadow: 0px 0px 0px 0px rgba(87, 87, 87, 0.2); } \
             div#notebook { background-color: White; } \
             .end_space { background-color: White; } \
         \
-            /* Customize text cells */ \
+            // Customize text cells {} \
             div.text_cell.rendered { font-size:1.1em; line-height:1.4em; } \
         \
-            /* We make the little box to the left of the cell as small as possible */ \
+            // We make the little box to the left of the cell as small as possible {} \
             div.prompt { min-width: 1ex; padding: 0; margin: 0; } \
             .prompt_container { min-width: 1ex;; max-width: 9ex; padding: 0; margin: 0; } \
             .input_prompt {min-width: 7ex; z-index: 44; margin:0; padding:0; font-size:.7em; max-width: 3ch; text-align: left;text-shadow: 0.5px 0.5px 0.5px;} \
@@ -81,10 +81,10 @@ if( document.getElementById("notebook-container") != null ){
             .run_this_cell{ padding: 0; display: none; max-width: 2ch;  text-align: left; } \
             div.output_prompt bdi { visibility: hidden; } \
 	    \
-            /* make run icons bigger */ \
+            // make run icons bigger {} \
             .run_this_cell i { display: none; font-size: 1.5em; max-width: 2ch; opacity: 0.7; text-align: left; } \
 	    \
-            /* Makes html output width larger and remove padding */ \
+            // Makes html output width larger and remove padding {} \
             div.output_subarea { max-width: 100%; padding: 0; } \
             div.run_this_cell{ padding:0; } \
         "
