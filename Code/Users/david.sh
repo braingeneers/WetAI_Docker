@@ -1,4 +1,9 @@
 
+# Add environmental variables
+# Set Environments: https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables
+
+
+
 # alias commands David likes
 #echo 'alias aws3="aws --endpoint https://s3.nautilus.optiputer.net s3"' >> ~/.bashrc
 #echo 'alias awsn="aws --endpoint https://s3.nautilus.optiputer.net"' >> ~/.bashrc
