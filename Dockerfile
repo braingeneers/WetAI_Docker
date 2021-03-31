@@ -1,5 +1,6 @@
 FROM jupyter/tensorflow-notebook:latest
-# Last Used image: jupyter/tensorflow-notebook:feacdbfc2e89
+# Last Succesful Used image: jupyter/tensorflow-notebook:feacdbfc2e89
+# Last Test image: jupyter/tensorflow-notebook:4d9c9bd9ced0
 USER root
 WORKDIR /home/jovyan
 
