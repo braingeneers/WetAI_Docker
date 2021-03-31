@@ -1,7 +1,10 @@
 
 # Add environmental variables
 # Set Environments: https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables
-
+#ENV ENDPOINT_URL="https://s3.nautilus.optiputer.net"
+#ENV S3_ENDPOINT="s3.nautilus.optiputer.net"
+#ENV AWS_LOG_LEVEL=3
+#ENV TF_CPP_MIN_LOG_LEVEL=3
 
 
 # alias commands David likes
