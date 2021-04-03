@@ -1,7 +1,6 @@
 VERSION_NAME=v3.0.0
-# Set io's Version name in custom.js file
-sed -i "s/{VERSION_NAME}/$VERSION_NAME/g"  ~/WetAI_Docker/Code/Set_Interface.js
-
+sed -i "s/{VERSION_NAME}/$VERSION_NAME/g"  ~/WetAI_Docker/Code/Set_Interface.js # Set version name in custom.js file
+apt update; apt-get install update; conda update -y conda # Generic Updates
 
 ############################################
 ############################################
@@ -21,16 +20,12 @@ echo "c.NotebookApp.allow_root = True" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.allow_origin = '*'" >> ~/.jupyter/jupyter_notebook_config.py  
 echo "c.NotebookApp.password = 'argon2:\$argon2id\$v=19\$m=10240,t=10,p=8\$lw1+5uzTxfAaGCmLcrQdQA\$5rTtD1TgWidh/JcE84jG4Q'" >> ~/.jupyter/jupyter_notebook_config.py 
 
-### Generic  Updates
-apt update; apt-get install update; conda update -y conda
-
 ### Install nb-extensiosn 
 conda install -y -c conda-forge  rise
 conda install -y -c conda-forge jupyter_contrib_nbextensions #conda install -y -c conda-forge jupyter_nbextensions_configurator
 jupyter nbextensions_configurator enable
 for package in collapsible_headings/main notify/notify toc2/main codefolding/main hide_header/main hide_input_all/main table_beautifier/main codefolding/edit help_panel/help_panel contrib_nbextensions_help_item/main python-markdown/main move_selected_cells/main splitcell/splitcell tree-filter/index; do jupyter nbextension enable $package; done;
 #jupyter nbextension enable varInspector/main # Cool but removes \tab autocomplete
-
 
 # Set Files from wet_io Github
 mv ~/WetAI_Docker/Code/Set_Login.html /root/login.html
@@ -40,14 +35,11 @@ mv ~/WetAI_Docker/Code/Password/Set_Password.py ~/.Set_Password.py
 chmod +x ~/WetAI_Docker/Code/Password/password.sh && mv ~/WetAI_Docker/Code/Password/password.sh /usr/local/bin/password
 
 # Create user's starting Apps & Files by downloading everything from github
-cd ~ && mkdir Apps Projects                   #<-- Create folders
-cd ~/Apps && mkdir  braingeneers
-rm -rf ~/work ~/WetAI_Docker                   #<-- remove previous folders
-#cd ~/Apps/braingeneers && git clone https://github.com/pupster90/Agora.git && git clone https://github.com/pupster90/Learn_io.git
+cd ~ && mkdir Apps Projects && cd ~/Apps && mkdir braingeneers   #<-- Create folders
+rm -rf ~/work ~/WetAI_Docker                                     #<-- remove previous folders
 cd ~/Apps/braingeneers && git clone https://github.com/braingeneers/Agora.git && git clone https://github.com/braingeneers/Learn_WetAI.git
 #git clone cd ~/Apps/braingeneers && git clone https://github.com/pupster90/spikesort_easy.git
 #cd ~/Projects && git clone https://github.com/pupster90/My_First_Research_Paper.git
-
 
 
 ############################################
