@@ -21,4 +21,4 @@ cd ~ && mkdir .aws && touch ~/.aws/credentials  # Setup for AWS credentials file
 
 # Packages for IoT Messaging in braingeneers
 pip3 install redis
-pip install -y awsiotsdk
+pip install  awsiotsdk
