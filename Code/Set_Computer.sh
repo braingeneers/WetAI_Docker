@@ -36,7 +36,6 @@ chmod +x ~/WetAI_Docker/Code/Password/password.sh && mv ~/WetAI_Docker/Code/Pass
 
 # Create user's starting Apps & Files by downloading everything from github
 cd ~ && mkdir Apps Projects && cd ~/Apps && mkdir braingeneers   #<-- Create folders
-rm -rf ~/work ~/WetAI_Docker                                     #<-- remove previous folders
 cd ~/Apps/braingeneers && git clone https://github.com/braingeneers/Agora.git && git clone https://github.com/braingeneers/Learn_WetAI.git
 #git clone cd ~/Apps/braingeneers && git clone https://github.com/pupster90/spikesort_easy.git
 #cd ~/Projects && git clone https://github.com/pupster90/My_First_Research_Paper.git
@@ -62,5 +61,5 @@ apt-get -y install docker-ce docker-ce-cli containerd.io
 
 # run individual braingeneers code
 cd ~/WetAI_Docker/Code/Users && chmod +x *.sh && for f in *.sh; do bash "$f" -H; done;
-
+rm -rf ~/work ~/WetAI_Docker  #<-- remove previous folders
 
