@@ -16,8 +16,8 @@ echo -e '#!/bin/bash\naws --endpoint https://s3.nautilus.optiputer.net "$@"' > /
 
 # AWS Code
 apt-get install -y --no-install-recommends awscli # Install aws
-cd ~ && mkdir .aws # Setup for AWS credentials file
-touch ~/.aws/credentials
+cd ~ && mkdir .aws && touch ~/.aws/credentials  # Setup for AWS credentials file
+
 
 # Packages for IoT Messaging in braingeneers
 pip3 install redis
