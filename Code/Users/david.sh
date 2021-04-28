@@ -19,4 +19,5 @@ echo -e '#!/bin/bash\naws --endpoint https://s3.nautilus.optiputer.net "$@"' > /
 
 # Packages for IoT Messaging in braingeneers
 pip3 install redis
-pip install  awsiotsdk
+pip install -Iv awsiotsdk==1.5.7
+pip install -v awscrt==0.10.8
