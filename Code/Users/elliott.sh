@@ -18,9 +18,9 @@ pip install --upgrade nbstripout # used to clean up notebooks before committing 
 pip3 install PyGithub
 
 ### BMTK Toolkit for Anton Collaboration
-git clone https://github.com/AllenInstitute/bmtk.git
-cd ~/bmtk && python setup.py install
-rm -rf ~/bmtk
+#git clone https://github.com/AllenInstitute/bmtk.git
+#cd ~/bmtk && python setup.py install
+#rm -rf ~/bmtk
 
 
 
