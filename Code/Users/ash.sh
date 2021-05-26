@@ -8,3 +8,8 @@ pip install torch
 pip install colour
 pip install plotly
 apt-get install libgomp1
+
+
+pip install awswrangler
+pip isntall tenacity
+
