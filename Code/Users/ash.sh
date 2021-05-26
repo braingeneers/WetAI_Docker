@@ -11,5 +11,5 @@ apt-get install libgomp1
 
 
 pip install awswrangler
-pip isntall tenacity
+pip install tenacity
 
