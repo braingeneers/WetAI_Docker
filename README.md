@@ -4,6 +4,7 @@ This code creates the docker container for WetAI. This is the main code for the 
 
 ## Useful Resources
 [WetAI Docker Page](https://hub.docker.com/r/braingeneers/wetai)
+[WetAI Wiki Page](https://github.com/braingeneers/wiki)
 
 
 ## Build Docker Image
