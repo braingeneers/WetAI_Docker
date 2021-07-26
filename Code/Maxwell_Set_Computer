@@ -3,6 +3,10 @@
 # The maxwell system is not able to run WetAI in a docker, so I had to install all the code directly onto the computer.
 
 
+# Clone WetAI Docker
+
+
+
 VERSION_NAME=v3.1.0
 sed -i "s/{VERSION_NAME}/$VERSION_NAME/g"  ~/WetAI_Docker/Code/Set_Interface.js # Set version name in custom.js file
 apt update; apt-get install update; 
