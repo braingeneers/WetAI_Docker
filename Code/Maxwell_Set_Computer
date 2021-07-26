@@ -30,7 +30,7 @@ conda update -y conda # This command is able to run on maxwell
 echo "c.NotebookApp.ip = '0.0.0.0'" > ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.extra_template_paths = ['/root','...html/templates','...html']" >> ~/.jupyter/jupyter_notebook_config.py
-echo "c.NotebookApp.port = 80" >> ~/.jupyter/jupyter_notebook_config.py  
+#echo "c.NotebookApp.port = 80" >> ~/.jupyter/jupyter_notebook_config.py  
 echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py  
 echo "c.NotebookApp.allow_root = True" >> ~/.jupyter/jupyter_notebook_config.py  
 echo "c.NotebookApp.allow_origin = '*'" >> ~/.jupyter/jupyter_notebook_config.py  
