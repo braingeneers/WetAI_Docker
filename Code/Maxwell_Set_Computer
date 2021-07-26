@@ -4,7 +4,7 @@
 
 
 # Clone WetAI Docker
-
+cd ~ && git clone https://github.com/braingeneers/WetAI_Docker.git
 
 
 VERSION_NAME=v3.1.0
