@@ -8,9 +8,10 @@ cd ~ && git clone https://github.com/braingeneers/WetAI_Docker.git
 
 # *** Maxwell ***
 # Get access to port 80 by rerouting 8888
+# I endedu up jsut using port 8888 on the maxwell. I don't think this code is used anymore
 # Link: https://serverfault.com/questions/112795/how-to-run-a-server-on-port-80-as-a-normal-user-on-linux
-iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8888
-iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 88888
+#iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8888
+#iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 88888
 
 VERSION_NAME=v3.1.0
 sed -i "s/{VERSION_NAME}/$VERSION_NAME/g"  ~/WetAI_Docker/Code/Set_Interface.js # Set version name in custom.js file
