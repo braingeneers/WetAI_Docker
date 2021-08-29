@@ -1,0 +1,49 @@
+{% extends 'templates/login.html'  %}
+
+
+{% block site  %}
+
+<div class="container">
+    
+<div class="row"> <div class="col-xs-offset-5 col-xs-2"><img src="https://drive.google.com/uc?export=view&id=1y1DIHH_Tbviy6dGht_TXPK4kO_IxYmB0" class="img-responsive" style="margin-top:30px;"></div></div> 
+<div class="row"><div class=" col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4"><hr style="margin-top:0px;padding-top:0px"></div></div>
+    
+<div class='row'><div class="col-xs-10 col-xs-offset-1"><p style="font-size: 1.2em;">
+    <font color="blue">WetAI</font> is a web platform where scientists conduct AI and neuroscience research both in silico and using human neural tissue. Researchers and their code will interact with human cerebral organoids in other cities through an online interface. In addition to managing experiments, WetAI contains infrastructure for analyzing data, sharing code with collaborators, and curating aggregated results. By combining each step of the scientific method into one platform, we will accelerate innovation and promote closer collaboration. <a href="https://youtu.be/J1RwbnOmw3M">Video tutorials</a> explain how to use WetAI. This project is in development and will be made public when finished.
+</p></div></div>
+&nbsp;
+&nbsp;
+&nbsp;
+
+<div class='row'>
+    <div class='col-xs-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6'>
+        <div class='embed-responsive embed-responsive-16by9'> 
+            <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/J1RwbnOmw3M'> 
+            </iframe>
+        </div>
+    </div>
+</div>
+   
+</div>
+
+{{super()}}
+
+
+<div class="container">
+<p style="color:white;">.</p>
+<div class="row"> <div class="col-xs-12"><img src="https://drive.google.com/uc?export=view&id=1TSmtBL9i29lFyTTpUbeJbbL87wkjldmA" class="img-responsive" style="margin-top:30px;"></div></div>
+<p style="color:white;">.</p> 
+<p style="color:white;">.</p> 
+</div>
+
+<script>
+document.getElementById("header").innerHTML = "";
+window.addEventListener('load', (event) => {
+    document.getElementById("site").style="display: block; height:auto";
+});
+window.addEventListener('resize', (event) => {
+    document.getElementById("site").style="display: block; height:auto";
+});
+</script>
+
+{% endblock  %}
