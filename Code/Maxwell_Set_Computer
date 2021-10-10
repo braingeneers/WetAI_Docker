@@ -2,6 +2,10 @@
 # This codes was used to set up WetAI on the computer that controls the maxwell interface.
 # The maxwell system is not able to run WetAI in a docker, so I had to install all the code directly onto the computer.
 
+# **Note** : I need to explain how the package maxwell was installed. 
+#.           (I ran this command) !pip install -e ./maxlab 
+
+
 # *** Maxwell ***
 # Clone WetAI Docker
 cd ~ && git clone https://github.com/braingeneers/WetAI_Docker.git
