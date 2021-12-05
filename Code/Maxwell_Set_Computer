@@ -77,6 +77,9 @@ cd ~/Apps/braingeneers && git clone https://github.com/braingeneers/Agora.git &&
 # Code used by all braingeneers
 pip install --upgrade git+https://github.com/braingeneers/braingeneerspy.git # install braingeneers python package
 
+# Install widget for choosing files in jupyter
+pip install ipyfilechooser
+
 ### Install Docker
 apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
