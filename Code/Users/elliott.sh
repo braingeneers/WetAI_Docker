@@ -22,6 +22,8 @@ pip3 install PyGithub
 #cd ~/bmtk && python setup.py install
 #rm -rf ~/bmtk
 
+# Install file chooser program
+pip install ipyfilechooser
 
 
 
