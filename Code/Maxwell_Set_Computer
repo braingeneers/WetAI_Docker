@@ -17,6 +17,11 @@ cd ~ && git clone https://github.com/braingeneers/WetAI_Docker.git
 #iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8888
 #iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 88888
 
+# *** Maxwell ***
+# install tmux for creating detached screens when ssh'ing
+sudo apt update
+sudo apt install tmux
+
 VERSION_NAME=v3.1.0
 sed -i "s/{VERSION_NAME}/$VERSION_NAME/g"  ~/WetAI_Docker/Code/Set_Interface.js # Set version name in custom.js file
 apt update; apt-get install update; 
