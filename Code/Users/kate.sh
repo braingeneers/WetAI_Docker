@@ -1,4 +1,4 @@
-
+# 0.3gb used
 
 # Setup to run Kate's Code
 conda install -y -c plotly plotly-orca
