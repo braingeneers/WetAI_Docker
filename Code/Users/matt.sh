@@ -5,3 +5,5 @@ rm -rf musclebeachtools_hlab
 
 git clone https://github.com/hengenlab/neuraltoolkit.git
 pip install neuraltoolkit/
+rm -rf neuraltoolkit
+
