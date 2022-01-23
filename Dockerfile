@@ -1,4 +1,6 @@
 FROM jupyter/tensorflow-notebook:4d9c9bd9ced0  
+# Tag I'm using for udpat (not yet pushed to github)
+
 # I stopped using "latest" because conda became stupidly slow
 # Last Succesful Used image: jupyter/tensorflow-notebook:feacdbfc2e89
 # Last Test image: jupyter/tensorflow-notebook:4d9c9bd9ced0
