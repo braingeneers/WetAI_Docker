@@ -1,4 +1,4 @@
-VERSION_NAME=v3.1.0
+VERSION_NAME=v4.0.0
 sed -i "s/{VERSION_NAME}/$VERSION_NAME/g"  ~/WetAI_Docker/Code/Set_Interface.js # Set version name in custom.js file
 apt update; apt-get install update; #conda update -y conda # Conda Command take FOREVER # Generic Updates
 
