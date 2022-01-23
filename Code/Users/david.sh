@@ -19,11 +19,10 @@ echo -e '#!/bin/bash\naws --endpoint https://s3.nautilus.optiputer.net "$@"' > /
 
 # Packages for IoT Messaging in braingeneers
 pip3 install redis
+pip install s4cmd
 pip install -Iv awsiotsdk==1.5.7
 pip install -v awscrt==0.10.8
 
-
-# Other 
-pip install s4cmd
+# Install Kubernetes 
 apt -y install curl
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
