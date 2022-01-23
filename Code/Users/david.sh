@@ -21,3 +21,7 @@ echo -e '#!/bin/bash\naws --endpoint https://s3.nautilus.optiputer.net "$@"' > /
 pip3 install redis
 pip install -Iv awsiotsdk==1.5.7
 pip install -v awscrt==0.10.8
+
+
+# Other 
+pip install s4cmd
