@@ -36,7 +36,7 @@ chmod +x ~/WetAI_Docker/Code/Password/password.sh && mv ~/WetAI_Docker/Code/Pass
 
 # Create user's starting Apps & Files by downloading everything from github
 cd ~ && mkdir Projects Data                                            #<-- Create folders
-cd ~ && mkdir Apps Projects Data && cd ~/Apps && mkdir braingeneers   #<-- Create folders
+cd ~ && mkdir Apps && cd ~/Apps && mkdir braingeneers   #<-- Create folders
 cd ~/Apps/braingeneers && git clone https://github.com/braingeneers/Agora.git && git clone https://github.com/braingeneers/Learn_WetAI.git
 #git clone cd ~/Apps/braingeneers && git clone https://github.com/pupster90/spikesort_easy.git
 #cd ~/Projects && git clone https://github.com/pupster90/My_First_Research_Paper.git
