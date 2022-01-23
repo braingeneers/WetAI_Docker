@@ -8,5 +8,5 @@ pip install spikeinterface==0.11.0
 pip install ml_ms4alg boto3
 apt-get -y update
 apt-get -y install vim
-pip install --upgrade kachery
-pip install git+https://github.com/flatironinstitute/spikeforest2.git
+#pip install --upgrade kachery
+#pip install git+https://github.com/flatironinstitute/spikeforest2.git
