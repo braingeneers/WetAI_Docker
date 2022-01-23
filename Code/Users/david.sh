@@ -25,3 +25,4 @@ pip install -v awscrt==0.10.8
 
 # Other 
 pip install s4cmd
+apt -y install curl
