@@ -51,13 +51,15 @@ cd ~/Apps/braingeneers && git clone https://github.com/braingeneers/Agora.git &&
 # Code used by all braingeneers
 pip install --upgrade git+https://github.com/braingeneers/braingeneerspy.git # install braingeneers python package
 
+
+### REMOVED-- PUT BACK IF PEOPLE ASK
 ### Install Docker
-apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-apt-get update
-apt-get -y install docker-ce docker-ce-cli containerd.io
-#dockerd & #commented because command doesn't work here
+#apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+#apt-get update
+#apt-get -y install docker-ce docker-ce-cli containerd.io
+##dockerd & #commented because command doesn't work here
 #service docker start # commented because command doesn't work
 
 # run individual braingeneers code
