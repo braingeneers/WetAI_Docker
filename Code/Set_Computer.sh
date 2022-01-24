@@ -56,7 +56,8 @@ cd ~/Apps/braingeneers && git clone https://github.com/braingeneers/Agora.git &&
 pip install --upgrade git+https://github.com/braingeneers/braingeneerspy.git # install braingeneers python package
 
 # Install Maxwell Api
-cd ~/WetAI_Docker/Code/ && unzip maxlab.zip && pip install -e ./maxlab 
+cd ~/WetAI_Docker/Code/ && unzip maxlab.zip && cp -r maxlab /opt/conda/lib/python3.9/site-packages
+#pip install -e ./maxlab 
 
 ### REMOVED-- PUT BACK IF PEOPLE ASK
 ### Install Docker
