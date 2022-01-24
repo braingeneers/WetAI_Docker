@@ -53,7 +53,7 @@ pip install --upgrade git+https://github.com/braingeneers/braingeneerspy.git # i
 
 # Install Maxwell Api
 cd ~/WetAI_Docker/Code/ && unzip maxlab.zip && 
-
+pip install -e ./maxlab 
 
 ### REMOVED-- PUT BACK IF PEOPLE ASK
 ### Install Docker
