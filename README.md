@@ -27,6 +27,12 @@ docker build --no-cache -t braingeneers/wetai:latest .
 ```
 
 ## Helpful Docker Commands
+***Start Docker Programm on Linux CentOS***
+
+```
+sudo systemctl start docker
+```
+
 **Run docker container**
 
 ```
