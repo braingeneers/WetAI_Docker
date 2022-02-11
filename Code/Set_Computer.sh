@@ -58,9 +58,30 @@ cd ~/WetAI_Docker/Code/ && unzip maxlab.zip && cp -r maxlab /opt/conda/lib/pytho
 #pip install -e ./maxlab 
 
 # Install pip packages
-pip install torch
-pip install colour
-pip install plotly
+pip install torch                      # Data analysis Packages
+pip install colour                     # Data analysis Packages
+pip install plotly                     # Data analysis Packages
+pip3 install redis                     # Packages for IoT Messaging
+pip install s4cmd                      # Packages for IoT Messaging
+pip install -Iv awsiotsdk==1.5.7       # Packages for IoT Messaging
+pip install -v awscrt==0.10.8          # Packages for IoT Messaging
+
+# AWS Code
+apt-get install -y --no-install-recommends awscli # Install aws
+cd ~ && mkdir .aws && touch ~/.aws/credentials  # Setup for AWS credentials file
+# Set alias: https://stackoverflow.com/questions/36388465/how-to-set-bash-aliases-for-docker-containers-in-dockerfile
+echo -e '#!/bin/bash\naws --endpoint https://s3.nautilus.optiputer.net s3 "$@"' > /usr/bin/aws3 && chmod +x /usr/bin/aws3
+echo -e '#!/bin/bash\naws --endpoint https://s3.nautilus.optiputer.net "$@"' > /usr/bin/awsn && chmod +x /usr/bin/awsn
+
+
+
+
+
+# Install Kubernetes 
+apt -y install curl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+rm kubectl
 
 ### REMOVED-- PUT BACK IF PEOPLE ASK
 ### Install Docker
