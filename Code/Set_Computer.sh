@@ -1,4 +1,4 @@
-VERSION_NAME=v4.0.1
+VERSION_NAME=v4.0.2
 sed -i "s/{VERSION_NAME}/$VERSION_NAME/g"  ~/WetAI_Docker/Code/Set_Interface.js # Set version name in custom.js file
 apt update; apt-get update; conda update -y conda.  # Generic Updates
 
@@ -7,8 +7,6 @@ apt update; apt-get update; conda update -y conda.  # Generic Updates
 #.    Code From Original io
 ############################################
 ############################################
-
-# This section contains modified code that comes from the original io project: https://github.com/pupster90/io_docker_setup
 
 ### Setup Jupyter config file
 echo "c.NotebookApp.ip = '0.0.0.0'" > ~/.jupyter/jupyter_notebook_config.py
@@ -58,6 +56,11 @@ pip install --upgrade git+https://github.com/braingeneers/braingeneerspy.git # i
 # Install Maxwell Api
 cd ~/WetAI_Docker/Code/ && unzip maxlab.zip && cp -r maxlab /opt/conda/lib/python3.9/site-packages
 #pip install -e ./maxlab 
+
+# Install pip packages
+pip install torch
+pip install colour
+pip install plotly
 
 ### REMOVED-- PUT BACK IF PEOPLE ASK
 ### Install Docker
