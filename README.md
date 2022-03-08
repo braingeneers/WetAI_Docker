@@ -33,11 +33,6 @@ docker build --no-cache -t braingeneers/wetai:latest .
 sudo systemctl start docker
 ```
 
-**Run docker container**
-
-```
-docker run -it --privileged -p 8800:80 -p 8900:8888 --name wetai-elliott --user root braingeneers/wetai:latest /bin/bash
-```
 
 **Run docker on MaxONe**
 
