@@ -9,7 +9,6 @@ This code creates the docker container for WetAI. This is the main code for the 
 
 ## Build Docker Image
 **Clone Repository**
-
 ```
 git clone https://github.com/braingeneers/WetAI_Docker.git
 ```
@@ -27,11 +26,7 @@ docker build --no-cache -t braingeneers/wetai:latest .
 ```
 
 ## Helpful Docker Commands
-***Start Docker Programm on Linux CentOS***
 
-```
-sudo systemctl start docker
-```
 
 
 **Run docker on MaxONe**
@@ -61,4 +56,8 @@ docker tag braingeneers/wetai:latest braingeneers/wetai:v1.0.0
 docker push braingeneers/wetai:latest
 docker push braingeneers/wetai:v1.0.0
 ```
-`
+
+***Start Docker Programm on Linux CentOS***
+```
+sudo systemctl start docker
+```
