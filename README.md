@@ -49,9 +49,9 @@ docker run -it --name wetai --network host --user root -v /home/maxone/wetai/Pro
 
 Volumes let us share a container's files outside of the docker. We create the folder we want to share, make it public, and then run docker.
 ```
-mkdir kate
-chmod a+rwx -R kate
-docker run -it --privileged -p 8803:80 -p 8903:8888 --name wetai-kate --user root -v /public/home/melliot1/kate:/home/jovyan/Projects braingeneers/wetai:v2.0.2 /bin/bash
+mkdir kate && mkdir kate/Projects && mkdir kate/Data
+docker run -it --privileged -p 8803:80 --name wetai-kate -v /public/home/melliot1/kate/Projects:/home/jovyan/Projects -v /public/home/melliot1/kate/Data:/home/jovyan/Data braingeneers/wetai:4.0.1 /bin/bash
+# inside docker run: password whatever
 ```
 
 **Commit docker container**
