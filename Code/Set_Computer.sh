@@ -22,8 +22,8 @@ echo "c.NotebookApp.password = 'argon2:\$argon2id\$v=19\$m=10240,t=10,p=8\$lw1+5
 conda #install -y -c conda-forge  rise   # removed because never used
 conda install -y -c conda-forge jupyter_contrib_nbextensions #conda install -y -c conda-forge jupyter_nbextensions_configurator
 jupyter nbextensions_configurator enable
-for package in collapsible_headings/main notify/notify toc2/main codefolding/main hide_header/main hide_input_all/main table_beautifier/main codefolding/edit help_panel/help_panel contrib_nbextensions_help_item/main python-markdown/main move_selected_cells/main splitcell/splitcell tree-filter/index; do jupyter nbextension enable $package; done;
-#jupyter nbextension enable varInspector/main # Cool but removes \tab autocomplete
+for package in collapsible_headings/main varInspector/main notify/notify toc2/main codefolding/main hide_header/main hide_input_all/main table_beautifier/main codefolding/edit help_panel/help_panel contrib_nbextensions_help_item/main python-markdown/main move_selected_cells/main splitcell/splitcell tree-filter/index; do jupyter nbextension enable $package; done;
+
 
 # Set Files from wet_io Github
 mv ~/WetAI_Docker/Code/Set_Login.html /root/login.html
