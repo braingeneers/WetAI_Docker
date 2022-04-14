@@ -4,8 +4,8 @@
 #conda install -y -c plotly plotly-orca
 #apt-get install -y xvfb libgtk2.0-0 libgconf-2-4
 
-# 
-pip install -y pySerialTransfer
+# Used for arduino on optogenetics project
+pip install pySerialTransfer
 
 
 
