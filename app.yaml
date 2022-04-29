@@ -10,3 +10,4 @@ services:
 #    pdMountPath: "/data"
 #    pdAccessMode: "ReadWriteOnce"
     environment: {}
+    args: ["password", "wetai"]
