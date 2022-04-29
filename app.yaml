@@ -7,7 +7,7 @@ services:
   wetai:
     image: "braingeneers/wetai:4.0.1"
     port: 80
-#    pdMountPath: "/data"
-#    pdAccessMode: "ReadWriteOnce"
     environment: {}
     args: ["password", "wetai"]
+#    pdMountPath: "/data"
+#    pdAccessMode: "ReadWriteOnce"
