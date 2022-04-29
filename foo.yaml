@@ -1,0 +1,44 @@
+# Short name of the app, for example 'jupyter'. This is used to name some Kubernetes resources,
+# for example the namespace is generated as 'jupyter-ns'.
+name: jupyter
+
+# Maintainer of the app. Informational only.
+author: workbench-interactive-analysis@broadinstitute.org
+
+# Longer description of the app. Informational only.
+description: |
+  Jupyter Notebook, Python and R kernels, GATK packages
+
+# Version of the app. Informational only.
+version: 1.0.14
+
+# List of services the app exposes.
+# NOTE: currently only one service is supported by the helm chart. In the future we may explore multi-service apps.
+services:
+  jupyter:
+    # The app docker image. Required.
+    image: "us.gcr.io/broad-dsp-gcr-public/terra-jupyter-gatk:1.0.14"
+
+    # Port the app listens on. Required.
+    port: 8000
+
+    # Optional. If the app is configured to listen on a base URL path, specify it here.
+    # If absent, we assume the app listens on / and we will set up an nginx reverse proxy based on
+    # the service name. However, not all apps are guaranteed to behave correctly under reverse proxies;
+    # so if possible, configure your app with a base URL.
+    baseUrl: "/jupyter/"
+
+    # Optional. Specifies a startup command and arguments for the app. This overrides the Dockerfile
+    # ENTRYPOINT if present.
+    command:  ["/usr/local/bin/jupyter"]
+    args: ["notebook"]
+
+    # Optional. Specifies the mount point for an attached PD and the access mode (ReadWriteOnce or ReadOnlyMany
+    # for read-write or read-only disks respectively). If absent no persistent volumes will be created.
+    pdMountPath: "/data"
+    pdAccessMode: "ReadWriteOnce"
+
+    # Optional. Specifies environment variables to be present in the container.
+    environment:
+      WORKSPACE_NAME: "my-ws"
+      WORKSPACE_NAMESPACE: "my-proj"

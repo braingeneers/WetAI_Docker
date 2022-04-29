@@ -1,0 +1,12 @@
+name: wetai
+author: Matthew Elliott
+description: |
+  WetAI
+version: 0.0.1
+services:
+  wetai:
+    image: "braingeneers/wetai:4.0.1"
+    port: 80
+#    pdMountPath: "/data"
+#    pdAccessMode: "ReadWriteOnce"
+    environment: {}
