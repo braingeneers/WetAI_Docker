@@ -9,5 +9,5 @@ services:
     port: 80
     environment: {}
     args: ["password", "wetai"]
-#    pdMountPath: "/data"
-#    pdAccessMode: "ReadWriteOnce"
+    pdMountPath: "/data"
+    pdAccessMode: "ReadWriteOnce"
