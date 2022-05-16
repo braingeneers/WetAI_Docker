@@ -5,10 +5,9 @@ description: |
 version: 0.0.1
 services:
   wetai:
-    image: "gcr.io/platform-dev-178517/wetai:0.0.1"
+    image: "gcr.io/platform-dev-178517/wetai:test7"
     port: 80
     baseUrl: "/wetai/"
     command: ["jupyter", "notebook"]
-    environment: {}
     pdMountPath: "/data"
     pdAccessMode: "ReadWriteOnce"
