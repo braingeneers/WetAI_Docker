@@ -5,7 +5,7 @@ description: |
 version: 0.0.1
 services:
   wetai:
-    image: "gcr.io/platform-dev-178517/wetai:test7"
+    image: "gcr.io/platform-dev-178517/wetai:test6"
     port: 80
     baseUrl: "/wetai/"
     command: ["jupyter", "notebook"]
