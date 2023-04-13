@@ -1,11 +1,10 @@
-VERSION_NAME=v4.0.2
+VERSION_NAME=v5.0.0
 sed -i "s/{VERSION_NAME}/$VERSION_NAME/g"  ~/WetAI_Docker/Code/Set_Interface.js # Set version name in custom.js file
-apt update; apt-get update; conda update -y conda.  # Generic Updates
+apt update; apt-get update; conda update -y conda  # Generic Updates
+
 
 ############################################
-############################################
-#.    Code From Original io
-############################################
+#.    Set Up Jupyter Environemnet
 ############################################
 
 ### Setup Jupyter config file
@@ -18,64 +17,46 @@ echo "c.NotebookApp.allow_root = True" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.allow_origin = '*'" >> ~/.jupyter/jupyter_notebook_config.py  
 echo "c.NotebookApp.password = 'argon2:\$argon2id\$v=19\$m=10240,t=10,p=8\$lw1+5uzTxfAaGCmLcrQdQA\$5rTtD1TgWidh/JcE84jG4Q'" >> ~/.jupyter/jupyter_notebook_config.py 
 
-### Install nb-extensiosn 
-conda #install -y -c conda-forge  rise   # removed because never used
+### Install extensions 
 conda install -y -c conda-forge jupyter_contrib_nbextensions #conda install -y -c conda-forge jupyter_nbextensions_configurator
 jupyter nbextensions_configurator enable
 for package in collapsible_headings/main varInspector/main notify/notify toc2/main codefolding/main hide_header/main hide_input_all/main table_beautifier/main codefolding/edit help_panel/help_panel contrib_nbextensions_help_item/main python-markdown/main move_selected_cells/main splitcell/splitcell tree-filter/index; do jupyter nbextension enable $package; done;
 
-
 # Set Files from wet_io Github
 mv ~/WetAI_Docker/Code/Set_Login.html /root/login.html
-mv ~/WetAI_Docker/Welcome\ to\ WetAI.ipynb ~/
 mkdir ~/.jupyter/custom && mv ~/WetAI_Docker/Code/Set_Interface.js ~/.jupyter/custom/custom.js 
 mv ~/WetAI_Docker/Code/Password/Set_Password.py ~/.Set_Password.py
 chmod +x ~/WetAI_Docker/Code/Password/password.sh && mv ~/WetAI_Docker/Code/Password/password.sh /usr/local/bin/password
+cd ~ && git clone https://github.com/pupster90/tutorials.git
 
-# Create user's starting Apps & Files by downloading everything from github
-cd ~ && mkdir Projects Data                                            #<-- Create folders
-cd ~ && mkdir Apps && cd ~/Apps && mkdir braingeneers   #<-- Create folders
-# Install Apps
-cd ~/Apps/braingeneers && git clone https://github.com/braingeneers/Agora.git && git clone https://github.com/braingeneers/Learn_WetAI.git
-# Install Projects
-
-
-#git clone cd ~/Apps/braingeneers && git clone https://github.com/pupster90/spikesort_easy.git
-#cd ~/Projects && git clone https://github.com/pupster90/My_First_Research_Paper.git
 
 
 ############################################
-############################################
-#.    Braingeneers
-############################################
+#.   Set Up Braingeneers Installations
 ############################################
 
 # Code used by all braingeneers
 pip install --upgrade git+https://github.com/braingeneers/braingeneerspy.git # install braingeneers python package
 
-# Install Maxwell Api
-cd ~/WetAI_Docker/Code/ && unzip maxlab.zip && cp -r maxlab /opt/conda/lib/python3.9/site-packages
-#pip install -e ./maxlab 
-
 # Install pip packages
+apt install -y  zip unzip              # Basic Package
+apt-get -y install vim                 # Basic Package
+pip install smart_open                 # For data analysis
 pip install torch                      # Data analysis Packages
 pip install colour                     # Data analysis Packages
 pip install plotly                     # Data analysis Packages
-pip3 install redis                     # Packages for IoT Messaging
+pip install redis                     # Packages for IoT Messaging
 pip install s4cmd                      # Packages for IoT Messaging
-pip install -Iv awsiotsdk==1.5.7       # Packages for IoT Messaging
-pip install -v awscrt==0.10.8          # Packages for IoT Messaging
 
 # AWS Code
 apt-get install -y --no-install-recommends awscli # Install aws
-cd ~ && mkdir .aws && touch ~/.aws/credentials  # Setup for AWS credentials file
+cd ~ && mkdir .aws                                # Setup for AWS credentials file
 # Set alias: https://stackoverflow.com/questions/36388465/how-to-set-bash-aliases-for-docker-containers-in-dockerfile
 echo -e '#!/bin/bash\naws --endpoint https://s3.nautilus.optiputer.net s3 "$@"' > /usr/bin/aws3 && chmod +x /usr/bin/aws3
 echo -e '#!/bin/bash\naws --endpoint https://s3.nautilus.optiputer.net "$@"' > /usr/bin/awsn && chmod +x /usr/bin/awsn
-
-
-
-
+#pip install -Iv awsiotsdk==1.5.7       # Packages for IoT Messaging
+#pip install -v awscrt==0.10.8          # Packages for IoT Messaging
+pip install awswrangler                #install aws package
 
 # Install Kubernetes 
 apt -y install curl
@@ -83,17 +64,5 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 rm kubectl
 
-### REMOVED-- PUT BACK IF PEOPLE ASK
-### Install Docker
-#apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-#add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-#apt-get update
-#apt-get -y install docker-ce docker-ce-cli containerd.io
-##dockerd & #commented because command doesn't work here
-#service docker start # commented because command doesn't work
-
-# run individual braingeneers code
-cd ~/WetAI_Docker/Code/Users && chmod +x *.sh && for f in *.sh; do bash "$f" -H; done;
-rm -rf ~/work ~/WetAI_Docker  #<-- remove previous folders
+rm -rf ~/WetAI_Docker  #<-- Clean up folders
 
